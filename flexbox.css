@@ -1,0 +1,75 @@
+.container { 
+    background: beige;
+    height: 100vh;
+    display: flex;   /*flexbox로 만들어주는 명령어 */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    align-content: center;
+    
+
+}
+.container2 {
+    background: beige;
+    height: 100%;
+    display: flex; 
+    flex-direction:column;  /*중심축 결정*/
+    flex-wrap: nowrap;
+    /*flex-flow: column nowrap; */      /* 합친것 */ 
+    justify-content: flex-start /* 처음 왼쪽부터 배열 ( flex-end는 오른쪽 부터 배열) */
+    /* space-around 는 각각의 item 마다 공간을 준다.*/
+     
+}
+.container3 {
+    background: beige;
+    height: 100%;
+    display: flex;
+    justify-content: space-around; /* 공간을 하나 하나 주므로 양쪽 끝은 1개의 공간을 차지하지마나 사이사이에 있는 것은 2개의 공간을 차지한다.*/
+                  /*space-evenly: 똑같은 공간으로 만듬; space-between: 양쪽은 공간없애고 사이사이만 공간 생기게 하는 것*/  
+    align-items: center;  /* 반대축에서 위치 조정 */
+    align-self: ;
+}
+.item {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    
+
+
+}
+/*http://academy.dream-coding.com/* 해보기 */
+
+
+
+.item2 { 
+    background: orange;
+    /* order: 1; --> 먼저 나오는 순서 지정 */
+    flex-grow: 1;
+    /* flex-shrink: 1; 점점 줄어든다.  */
+   
+}
+.item3 { 
+    background: yellow
+}
+.item4 { 
+    background: green
+    
+}
+.item5 { 
+    background: blue
+}
+.item6 { 
+    background: purple
+}
+.item7 { 
+    background: palegreen
+}
+.item8 { 
+    background: antiquewhite
+}
+.item9 { 
+    background: blueviolet
+}
+.item10 { 
+    background: paleturquoise
+}
