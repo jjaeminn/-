@@ -122,5 +122,63 @@ class Car {
   //상속할때는 무조건 자식생성자들이 부모 생성자들을 호줄 해야한다.( 기본원리)
   //super();  부모 클래스로부터 상속받은 필드나 메소드를 //자식 클래스에서 참조하는 데 사용하는 참조 변수입니다.
   // 그 다음 인수가 같아야 하기 때문에 인수도 똑같이 넘겨주기
+
+  // promise 
+
+// 기본 툴:const pr = new Promise((성공, 실패)=> {
+//});
+
+
+const pr = new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    resolve('OK')
+  },1000)
+             });
+
+console.log(pr);
+
+const hr = new Promise((resolve, reject)=>{
+  setTimeout(()=>{
+    reject(new Error('error..'))
+  },1000)
+             });
+
+
+console.log(hr);
+
+pr.then(
+    function(result){}, // then은 함수가 실행 됬을떄의 실행되는 함수를 지정할 수 있다. 
+    function(err){} 
+);
+
+// pr.then(
+//    function(result){} 이렇게 나타낼 수 있음 
+//).catch(
+//    function(err){} 이게 더 좋다.(확실함)
+//).fi
+
+const fd = new Promise((resolve,reject) => {
+    setTimeout(()=> {
+      resolve("OK");
+    },1000)
+});
+
+console.log("시작");
+fd.then((result)=>{
+  console.log(result);
+}).catch((err)=>{
+  console.log(err);
+}).finally(()=> {
+  console.log("끝");}
+        )
+
+
+
+
+//promise chaining 이런 식임 
+f1().then((res)=> f2(res))
+  .then(res)=> f3(res))
+  .then(res)=> console.log(res))
+  .catch(console.log)
   
   
